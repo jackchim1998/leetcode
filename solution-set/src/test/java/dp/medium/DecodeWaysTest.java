@@ -1,11 +1,8 @@
 package dp.medium;
 
-import binarytree.medium.PseudoPalindromicPathsInBinaryTree;
-import common.BinaryTreeBuilder;
-import common.TreeNode;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Jack
@@ -48,10 +45,22 @@ class DecodeWaysTest {
         int res = solution.numDecoding("2101");
         assertEquals(1, res);
     }
+
     @Test
     public void example7() {
         int res = solution.numDecoding("230");
         assertEquals(0, res);
     }
 
+    @Test
+    public void example8() {
+        int res = solution.numDecoding("2727");
+        assertEquals(1, res);
+    }
+
+    @Test
+    public void example9() {
+        int res = solution.numDecoding("2611055971756562");
+        assertEquals(4, res);
+    }
 }

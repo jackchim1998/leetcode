@@ -12,6 +12,6 @@ public class BinaryTreeUtil {
             return false;
         if (node1.val != node2.val)
             return false;
-        return isAllNodesSameValue(node1.left, node2.left) && isAllNodesSameValue(node2.left, node2.right);
+        return isAllNodesSameValue(node1.left, node2.left) && isAllNodesSameValue(node2.right, node2.right);
     }
 }

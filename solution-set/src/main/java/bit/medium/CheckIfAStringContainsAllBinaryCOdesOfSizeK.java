@@ -2,8 +2,13 @@ package bit.medium;
 
 /**
  * @author Jack
+ * q.1461
+ * constraint:
+ * 1 <= s.length <= 5 * 10^5
+ * s consists of 0's and 1's only.
+ * 1 <= k <= 20
  */
-public class CheckIfAStringConatinsAllBinaryCOdesOfSizeK {
+public class CheckIfAStringContainsAllBinaryCOdesOfSizeK {
     public boolean hasAllCodes(String s, int k) {
         if (s.length() < k) return false;
         char[] chars = s.toCharArray();

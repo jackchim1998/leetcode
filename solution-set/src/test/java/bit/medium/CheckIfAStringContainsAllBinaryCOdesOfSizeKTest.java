@@ -1,6 +1,5 @@
 package bit.medium;
 
-import bit.medium.CheckIfAStringConatinsAllBinaryCOdesOfSizeK;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -9,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * @author Jack
  */
-class CheckIfAStringConatinsAllBinaryCOdesOfSizeKTest {
-    private final CheckIfAStringConatinsAllBinaryCOdesOfSizeK solution = new CheckIfAStringConatinsAllBinaryCOdesOfSizeK();
+class CheckIfAStringContainsAllBinaryCOdesOfSizeKTest {
+    private final CheckIfAStringContainsAllBinaryCOdesOfSizeK solution = new CheckIfAStringContainsAllBinaryCOdesOfSizeK();
 
     @Test
     void example1() {

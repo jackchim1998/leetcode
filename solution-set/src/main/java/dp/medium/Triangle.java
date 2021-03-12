@@ -24,7 +24,7 @@ public class Triangle {
     }
     /**
      * The below is not the fastest one
-     * we can use only one array to solve and eliminate a lot of if conditions
+     * we can use only one array to solve and eliminate a lot of if conditions by bottom-up
      */
 //    public int minimumTotal(List<List<Integer>> triangle) {
 //        int n = triangle.size();

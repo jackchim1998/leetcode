@@ -32,7 +32,7 @@ public class CoinChange {
      * I think it is slower because of if conditions and lots of function call
      */
 
-
+//
 //    public int coinChange(int[] coins, int amount) {
 //        int[] dp = new int[amount + 1];
 //        return stepsNeed(coins, amount, dp);
@@ -41,17 +41,14 @@ public class CoinChange {
 //    private int stepsNeed(int[] coins, int diff, int[] dp) {
 //        if (diff < 0) return -1;
 //        if (diff == 0) return 0;
-//        if (dp[diff] > 0) return dp[diff];
+//        if (dp[diff] != 0) return dp[diff]; // use != 0 is faster than > 0
 //        int min = Integer.MAX_VALUE;
 //        for (int coin : coins) {
 //            int steps = stepsNeed(coins, diff - coin, dp);
-//            if (steps < 0) continue;
-//            if (steps < min)
-//                min = steps;
+//            if (steps >= 0 && steps + 1 < min)
+//                min = steps+1;
 //        }
-//        if (min == Integer.MAX_VALUE)
-//            return -1;
-//        dp[diff] = min + 1;
+//        dp[diff] = min == Integer.MAX_VALUE ? -1 : min;
 //        return dp[diff];
 //    }
 }

@@ -11,10 +11,8 @@ import java.util.Arrays;
  * 0 <= amount <= 104
  */
 public class CoinChange {
-    private int[] dp;
-
     public int coinChange(int[] coins, int amount) {
-        dp = new int[amount + 1];
+        int[] dp = new int[amount + 1];
         Arrays.fill(dp, Integer.MAX_VALUE);
         dp[0] = 0;
         for (int i = 1; i <= amount; i++) {
@@ -34,20 +32,19 @@ public class CoinChange {
      * I think it is slower because of if conditions and lots of function call
      */
 
-//    private int[] dp;
-//
+
 //    public int coinChange(int[] coins, int amount) {
-//        dp = new int[amount + 1];
-//        return stepsNeed(coins, amount);
+//        int[] dp = new int[amount + 1];
+//        return stepsNeed(coins, amount, dp);
 //    }
 //
-//    private int stepsNeed(int[] coins, int diff) {
+//    private int stepsNeed(int[] coins, int diff, int[] dp) {
 //        if (diff < 0) return -1;
 //        if (diff == 0) return 0;
 //        if (dp[diff] > 0) return dp[diff];
 //        int min = Integer.MAX_VALUE;
 //        for (int coin : coins) {
-//            int steps = stepsNeed(coins, diff - coin);
+//            int steps = stepsNeed(coins, diff - coin, dp);
 //            if (steps < 0) continue;
 //            if (steps < min)
 //                min = steps;

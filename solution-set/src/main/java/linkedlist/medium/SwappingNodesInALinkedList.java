@@ -4,6 +4,11 @@ import common.ListNode;
 
 /**
  * @author Jack
+ * q.1721
+ * constraint:
+ * The number of nodes in the list is n.
+ * 1 <= k <= n <= 105
+ * 0 <= Node.val <= 100
  */
 public class SwappingNodesInALinkedList {
     public ListNode swapNodes(ListNode head, int k) {

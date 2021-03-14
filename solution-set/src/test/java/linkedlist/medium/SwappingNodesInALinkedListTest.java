@@ -1,4 +1,4 @@
-package linkedlist.easy;
+package linkedlist.medium;
 
 import common.LinkedListBuilder;
 import common.LinkedListUtil;

@@ -5,6 +5,10 @@ import java.util.List;
 
 /**
  * @author Jack
+ * q.417
+ * note:
+ * The order of returned grid coordinates does not matter.
+ * Both m and n are less than 150.
  */
 public class PacificAtlanticWaterFlow {
     public List<List<Integer>> pacificAtlantic(int[][] matrix) {

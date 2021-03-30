@@ -24,8 +24,8 @@ public class RussianDollEnvelopes {
         return len;
     }
 
-    /**
-     * below using library to sort and then calculate based on area. It is slow because area relationship is not exactly match envelop relationship
+    /*
+      below using library to sort and then calculate based on area. It is slow because area relationship is not exactly match envelop relationship
      */
 //    public int maxEnvelopes(int[][] envelopes) {
 //        int[] dp = new int[envelopes.length];

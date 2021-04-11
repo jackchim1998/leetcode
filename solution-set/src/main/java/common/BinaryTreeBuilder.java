@@ -27,7 +27,7 @@ public class BinaryTreeBuilder {
     }
 
     private void validateDisconnectedNode(int idx) {
-        if (idx>=values.length) return;
+        if (idx >= values.length) return;
         if (values[idx] != null) throw new RuntimeException("Find Disconnected Node In idx = " + idx);
         validateDisconnectedNode(idx * 2 + 1);
         validateDisconnectedNode(idx * 2 + 2);

@@ -3,7 +3,7 @@ package string.medium;
 /**
  * @author Jack
  */
-public class RemoveAllAdjacentDuplicatesInStringII { // divide and conquer is better
+public class RemoveAllAdjacentDuplicatesInStringII {
     public String removeDuplicates(String s, int k) {
         boolean deleted = false;
         StringBuilder result = new StringBuilder();

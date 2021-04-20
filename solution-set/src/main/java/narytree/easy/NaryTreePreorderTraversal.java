@@ -1,4 +1,4 @@
-package narytree.medium;
+package narytree.easy;
 
 import common.Node;
 

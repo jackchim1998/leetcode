@@ -1,4 +1,4 @@
-package string.medium;
+package string.easy;
 
 /**
  * @author Jack

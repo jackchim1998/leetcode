@@ -1,6 +1,7 @@
-package string.medium;
+package string.easy;
 
 import org.junit.jupiter.api.Test;
+import string.easy.CountBinarySubStrings;
 
 import static org.junit.jupiter.api.Assertions.*;
 

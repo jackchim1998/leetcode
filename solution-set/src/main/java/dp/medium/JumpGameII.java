@@ -9,7 +9,7 @@ public class JumpGameII {
         int count = 0;
         while (pos < nums.length - 1) {
             count++;
-            if (nums[pos] + pos >= nums.length + 1) break;
+            if (nums[pos] + pos >= nums.length - 1) break;
             int maxStep = nums[pos];
             int maxDistance = 0;
             int stepChosen = 0;

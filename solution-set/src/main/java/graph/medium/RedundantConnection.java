@@ -6,10 +6,10 @@ package graph.medium;
 public class RedundantConnection {
     public int[] findRedundantConnection(int[][] edges) {
         int[] parent = new int[edges.length + 1];
-        for (int i = 0; i < edges.length; i++) {
-            int srcRoot = find(parent, edges[i][0]);
-            int desRoot = find(parent, edges[i][1]);
-            if (srcRoot == desRoot) return edges[i];
+        for (int[] edge : edges) {
+            int srcRoot = find(parent, edge[0]);
+            int desRoot = find(parent, edge[1]);
+            if (srcRoot == desRoot) return edge;
             else parent[srcRoot] = desRoot;
         }
         return new int[2];

@@ -1,5 +1,8 @@
 package common;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Jack
  */
@@ -11,25 +14,27 @@ public class BinaryTreeBuilder {
     }
 
     public TreeNode build() {
-        if (values == null || values.length == 0)
+        if (values == null || values.length == 0 || values[0] == null)
             return null;
-        return insertLevelOrder(0);
-    }
-
-    private TreeNode insertLevelOrder(int idx) {
-        if (idx >= values.length) return null;
-        if (values[idx] == null) {
-            validateDisconnectedNode(idx * 2 + 1);
-            validateDisconnectedNode(idx * 2 + 2);
-            return null;
+        TreeNode root = new TreeNode(values[0]);
+        List<TreeNode> nodes = List.of(root);
+        int idx = 1;
+        while (!nodes.isEmpty() && idx < values.length) {
+            List<TreeNode> next = new ArrayList<>(nodes.size() * 2);
+            for (TreeNode node : nodes) {
+                node.left = newTreeNode(idx++);
+                if (node.left != null) next.add(node.left);
+                node.right = newTreeNode(idx++);
+                if (node.right != null) next.add(node.right);
+            }
+            nodes = next;
         }
-        return new TreeNode(values[idx], insertLevelOrder(idx * 2 + 1), insertLevelOrder(idx * 2 + 2));
+        if (idx < values.length) throw new RuntimeException("Find Disconnected Node In idx = " + idx);
+        return root;
     }
 
-    private void validateDisconnectedNode(int idx) {
-        if (idx >= values.length) return;
-        if (values[idx] != null) throw new RuntimeException("Find Disconnected Node In idx = " + idx);
-        validateDisconnectedNode(idx * 2 + 1);
-        validateDisconnectedNode(idx * 2 + 2);
+    private TreeNode newTreeNode(int idx) {
+        return idx < values.length && values[idx] != null ? new TreeNode(values[idx]) : null;
     }
+
 }

@@ -1,9 +1,7 @@
 package medium;
 
 import common.BinaryTreeBuilder;
-import common.BinaryTreeBuilderV2;
 import common.TreeNode;
-import medium.FlattenBinaryTreeToLinkedList;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -19,7 +17,7 @@ class FlattenBinaryTreeToLinkedListTest {
 
     @Test
     void example1() {
-        TreeNode root = new BinaryTreeBuilderV2(new Integer[]{1, 2, 5, 3, 4, null, 6}).build();
+        TreeNode root = new BinaryTreeBuilder(new Integer[]{1, 2, 5, 3, 4, null, 6}).build();
         solution.flatten(root);
         assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6}, goThroughRight(root));
     }

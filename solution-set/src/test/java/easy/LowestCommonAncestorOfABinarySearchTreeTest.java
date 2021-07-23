@@ -1,6 +1,6 @@
 package easy;
 
-import common.BinaryTreeBuilderV2;
+import common.BinaryTreeBuilder;
 import common.TreeNode;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +14,7 @@ class LowestCommonAncestorOfABinarySearchTreeTest {
 
     @Test
     void example1() {
-        TreeNode root = new BinaryTreeBuilderV2(new Integer[]{6, 2, 8, 0, 4, 7, 9, null, null, 3, 5}).build();
+        TreeNode root = new BinaryTreeBuilder(new Integer[]{6, 2, 8, 0, 4, 7, 9, null, null, 3, 5}).build();
         TreeNode treeNode = solution.lowestCommonAncestor(root, root.left, root.right);
         assertEquals(root, treeNode);
     }

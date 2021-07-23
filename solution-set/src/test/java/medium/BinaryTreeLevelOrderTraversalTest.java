@@ -1,8 +1,6 @@
 package medium;
 
 import common.BinaryTreeBuilder;
-import common.BinaryTreeBuilderV2;
-import medium.BinaryTreeLevelOrderTraversal;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -18,7 +16,7 @@ class BinaryTreeLevelOrderTraversalTest {
 
     @Test
     void example1() {
-        List<List<Integer>> result = solution.levelOrder(new BinaryTreeBuilderV2(new Integer[]{3, 9, 20, null, null, 15, 7}).build());
+        List<List<Integer>> result = solution.levelOrder(new BinaryTreeBuilder(new Integer[]{3, 9, 20, null, null, 15, 7}).build());
         assertEquals(3, result.size());
         assertArrayEquals(new int[]{3}, result.get(0).stream().mapToInt(i -> i).toArray());
         assertArrayEquals(new int[]{9, 20}, result.get(1).stream().mapToInt(i -> i).toArray());

@@ -1,7 +1,6 @@
 package medium;
 
 import common.BinaryTreeBuilder;
-import common.BinaryTreeBuilderV2;
 import common.TreeNode;
 import org.junit.jupiter.api.Test;
 
@@ -15,14 +14,14 @@ public class PseudoPalindromicPathsInBinaryTreeTest {
 
     @Test
     public void example1() {
-        TreeNode root = new BinaryTreeBuilderV2(new Integer[]{2, 3, 1, 3, 1, null, 1}).build();
+        TreeNode root = new BinaryTreeBuilder(new Integer[]{2, 3, 1, 3, 1, null, 1}).build();
         int res = solution.pseudoPalindromicPaths(root);
         assertEquals(2, res);
     }
 
     @Test
     public void example2() {
-        TreeNode root = new BinaryTreeBuilderV2(new Integer[]{2, 1, 1, 1, 3, null, null, null, null, null, 1}).build();
+        TreeNode root = new BinaryTreeBuilder(new Integer[]{2, 1, 1, 1, 3, null, null, null, null, null, 1}).build();
         int res = solution.pseudoPalindromicPaths(root);
         assertEquals(1, res);
     }

@@ -9,17 +9,17 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 /**
  * @author Jack
  */
-class BinaryTreeBuilderV2Test {
+class BinaryTreeBuilderTest {
     @Test
     void emptyOrNullTree() {
-        assertNull(new BinaryTreeBuilderV2(null).build());
-        assertNull(new BinaryTreeBuilderV2(new Integer[]{}).build());
-        assertNull(new BinaryTreeBuilderV2(new Integer[]{null, 1}).build());
+        assertNull(new BinaryTreeBuilder(null).build());
+        assertNull(new BinaryTreeBuilder(new Integer[]{}).build());
+        assertNull(new BinaryTreeBuilder(new Integer[]{null, 1}).build());
     }
 
     @Test
     void normalTree() {
-        TreeNode root = new BinaryTreeBuilderV2(new Integer[]{1, null, 2, 3, 4}).build();
+        TreeNode root = new BinaryTreeBuilder(new Integer[]{1, null, 2, 3, 4}).build();
         assertEquals(1, root.val);
         assertNull(root.left);
         assertEquals(2, root.right.val);
@@ -29,7 +29,7 @@ class BinaryTreeBuilderV2Test {
 
     @Test
     void disconnectedTree() {
-        assertThrows(RuntimeException.class, () -> new BinaryTreeBuilderV2(new Integer[]{1, null, null, 2}).build());
-        assertThrows(RuntimeException.class, () -> new BinaryTreeBuilderV2(new Integer[]{1, null, 2, null, 3, null, 4, null, null, 5}).build());
+        assertThrows(RuntimeException.class, () -> new BinaryTreeBuilder(new Integer[]{1, null, null, 2}).build());
+        assertThrows(RuntimeException.class, () -> new BinaryTreeBuilder(new Integer[]{1, null, 2, null, 3, null, 4, null, null, 5}).build());
     }
 }

@@ -1,6 +1,6 @@
 package hard;
 
-import common.BinaryTreeBuilderV2;
+import common.BinaryTreeBuilder;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,11 +13,11 @@ class BinaryTreeMaximumPathSumTest {
 
     @Test
     void example1() {
-        assertEquals(6, solution.maxPathSum(new BinaryTreeBuilderV2(new Integer[]{1, 2, 3}).build()));
+        assertEquals(6, solution.maxPathSum(new BinaryTreeBuilder(new Integer[]{1, 2, 3}).build()));
     }
 
     @Test
     void example2() {
-        assertEquals(-3, solution.maxPathSum(new BinaryTreeBuilderV2(new Integer[]{-3}).build()));
+        assertEquals(-3, solution.maxPathSum(new BinaryTreeBuilder(new Integer[]{-3}).build()));
     }
 }

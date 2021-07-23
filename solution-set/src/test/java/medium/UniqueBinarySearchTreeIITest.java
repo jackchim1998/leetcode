@@ -1,6 +1,7 @@
 package medium;
 
 import common.BinaryTreeBuilder;
+import common.BinaryTreeBuilderV2;
 import common.BinaryTreeUtil;
 import common.TreeNode;
 import medium.UniqueBinarySearchTreeII;
@@ -20,7 +21,7 @@ class UniqueBinarySearchTreeIITest {
     void example1() {
         List<TreeNode> roots = solution.generateTrees(1);
         TreeNode[] answers = new TreeNode[]{
-                new BinaryTreeBuilder(new Integer[]{1}).build(),
+                new BinaryTreeBuilderV2(new Integer[]{1}).build(),
         };
         isMatched(roots,answers);
     }
@@ -29,8 +30,8 @@ class UniqueBinarySearchTreeIITest {
     void example2() {
         List<TreeNode> roots = solution.generateTrees(2);
         TreeNode[] answers = new TreeNode[]{
-                new BinaryTreeBuilder(new Integer[]{1, null, 2}).build(),
-                new BinaryTreeBuilder(new Integer[]{2, 1, null}).build(),
+                new BinaryTreeBuilderV2(new Integer[]{1, null, 2}).build(),
+                new BinaryTreeBuilderV2(new Integer[]{2, 1, null}).build(),
         };
         isMatched(roots,answers);
     }
@@ -39,11 +40,11 @@ class UniqueBinarySearchTreeIITest {
     void example3() {
         List<TreeNode> roots = solution.generateTrees(3);
         TreeNode[] answers = new TreeNode[]{
-                new BinaryTreeBuilder(new Integer[]{1, null, 3, null, null, 2, null}).build(),
-                new BinaryTreeBuilder(new Integer[]{1, null, 2, null, null, null, 3}).build(),
-                new BinaryTreeBuilder(new Integer[]{2, 1, 3}).build(),
-                new BinaryTreeBuilder(new Integer[]{3, 2, null, 1, null, null, null}).build(),
-                new BinaryTreeBuilder(new Integer[]{3, 1, null, null, 2, null, null}).build()
+                new BinaryTreeBuilderV2(new Integer[]{1, null, 3,  2}).build(),
+                new BinaryTreeBuilderV2(new Integer[]{1, null, 2,  null, 3}).build(),
+                new BinaryTreeBuilderV2(new Integer[]{2, 1, 3}).build(),
+                new BinaryTreeBuilderV2(new Integer[]{3, 2, null, 1, null}).build(),
+                new BinaryTreeBuilderV2(new Integer[]{3, 1, null, null, 2}).build()
         };
         isMatched(roots,answers);
     }

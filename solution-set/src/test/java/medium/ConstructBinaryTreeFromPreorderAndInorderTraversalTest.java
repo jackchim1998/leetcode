@@ -1,8 +1,8 @@
 package medium;
 
 import common.BinaryTreeBuilder;
+import common.BinaryTreeBuilderV2;
 import common.BinaryTreeUtil;
-import medium.ConstructBinaryTreeFromPreorderAndInorderTraversal;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -13,7 +13,7 @@ class ConstructBinaryTreeFromPreorderAndInorderTraversalTest {
 
     @Test
     void example1() {
-        BinaryTreeUtil.isAllNodesSameValue(new BinaryTreeBuilder(new Integer[]{3,9,20,null,null,15,7}).build(), solution.buildTree(new int[]{3,9,20,15,7}, new int[]{9,3,15,20,7}));
+        BinaryTreeUtil.isAllNodesSameValue(new BinaryTreeBuilderV2(new Integer[]{3, 9, 20, null, null, 15, 7}).build(), solution.buildTree(new int[]{3, 9, 20, 15, 7}, new int[]{9, 3, 15, 20, 7}));
     }
 
 }

@@ -1,9 +1,8 @@
 package medium;
 
-import common.BinaryTreeBuilder;
+import common.BinaryTreeBuilderV2;
 import common.BinaryTreeUtil;
 import common.TreeNode;
-import medium.InsertIntoABinarySearchTree;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -14,7 +13,7 @@ class InsertIntoABinarySearchTreeTest {
 
     @Test
     void example1() {
-        TreeNode input = new BinaryTreeBuilder(new Integer[]{4, 2, 7, 1, 3, null, null}).build();
+        TreeNode input = new BinaryTreeBuilderV2(new Integer[]{4, 2, 7, 1, 3}).build();
         TreeNode result = solution.insertIntoBST(input, 5);
         BinaryTreeUtil.isAllNodesSameValue(result, input);
     }

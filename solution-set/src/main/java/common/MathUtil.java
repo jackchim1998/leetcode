@@ -19,10 +19,7 @@ public class MathUtil {
                 n--;
                 r--;
             }
-        } else
-            p = 1;
-
-
+        }
         return p;
     }
 

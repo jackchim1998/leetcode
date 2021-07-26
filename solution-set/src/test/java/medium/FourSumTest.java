@@ -1,6 +1,6 @@
 package medium;
 
-import org.junit.jupiter.api.Assertions;
+import common.AssertUtil;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -21,27 +21,14 @@ class FourSumTest {
         expected.add(List.of(-2, -1, 1, 2));
         expected.add(List.of(-2, 0, 0, 2));
         expected.add(List.of(-1, 0, 0, 1));
-        validate(expected, result);
+        AssertUtil.assertEquals(expected, result);
     }
 
     @Test
     void example2() {
         List<List<Integer>> result = solution.fourSum(new int[]{0, 0, 0}, 0);
         List<List<Integer>> expected = new ArrayList<>();
-        validate(expected, result);
-    }
-
-    private void validate(List<List<Integer>> expected, List<List<Integer>> result) {
-        Assertions.assertEquals(expected.size(), result.size());
-        boolean[] exists = new boolean[expected.size()];
-        for (int i = 0; i < expected.size(); i++)
-            for (List<Integer> integers : result)
-                if (expected.get(i).equals(integers)) {
-                    exists[i] = true;
-                    break;
-                }
-        for (boolean exist : exists)
-            assertTrue(exist);
+        AssertUtil.assertEquals(expected, result);
     }
 
 }

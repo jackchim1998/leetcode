@@ -3,8 +3,6 @@ package medium;
 import common.AssertUtil;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-
 /**
  * @author Jack
  */

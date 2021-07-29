@@ -3,6 +3,8 @@ package medium;
 import common.TreeNode;
 
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -20,5 +22,22 @@ public class BinaryTreeInorderTraversal {
         recursiveInorderTraversal(result, node.left);
         result.add(node.val);
         recursiveInorderTraversal(result, node.right);
+    }
+
+    public List<Integer> iterativeInorderTraversal(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode curr = root;
+
+        while (curr != null || !stack.isEmpty()) {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+            TreeNode node = stack.pop();
+            result.add(node.val);
+            curr = node.right;
+        }
+        return result;
     }
 }

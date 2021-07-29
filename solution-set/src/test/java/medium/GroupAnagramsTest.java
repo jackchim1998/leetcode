@@ -21,4 +21,20 @@ class GroupAnagramsTest {
         );
         AssertUtil.assertEqualsIgnoreOrders(expected, result);
     }
+
+    @Test
+    void example2() {
+        List<List<String>> result = solution.groupAnagrams(new String[]{""});
+        List<List<String>> expected = List.of(
+                List.of("")
+        );
+        AssertUtil.assertEqualsIgnoreOrders(expected, result);
+    }
+
+    @Test
+    void example3() {
+        List<List<String>> result = solution.groupAnagrams(new String[0]);
+        List<List<String>> expected = List.of();
+        AssertUtil.assertEqualsIgnoreOrders(expected, result);
+    }
 }

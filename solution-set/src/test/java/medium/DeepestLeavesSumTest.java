@@ -13,7 +13,7 @@ class DeepestLeavesSumTest {
 
     @Test
     void example1() {
-        assertEquals(15, solution.deepestLeavesSum(new BinaryTreeBuilder(new Integer[]{1, 2, 3, 4, 5, null, 6, 7, null, null, null,  null, 8}).build()));
+        assertEquals(15, solution.deepestLeavesSum(new BinaryTreeBuilder(new Integer[]{1, 2, 3, 4, 5, null, 6, 7, null, null, null, null, 8}).build()));
     }
 
     @Test

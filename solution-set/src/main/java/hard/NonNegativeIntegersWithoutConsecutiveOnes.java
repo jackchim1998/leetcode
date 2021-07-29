@@ -14,15 +14,14 @@ public class NonNegativeIntegersWithoutConsecutiveOnes {
     private int findIntegers(int n, int[] dp, int numOfDigits) {
         if (n == 1) return 2;
         if (n == 0) return 1;
-        int cnt = dp[numOfDigits - 1];
         // consider n=18, we know the cnt of 0->15, the rest is 16->18 (=0->2)
         int x = (int) (n - Math.pow(2, numOfDigits - 1));
         // consider n=28, we know the cnt of 0->15, discard 24->28 because first and second digits are 1, the rest is 16->23 (=0->7)
         int y = (int) (Math.pow(2, numOfDigits - 2) - 1);
         if (x < y)
-            return cnt + findIntegers(x, dp, numOfDigits(x));
+            return dp[numOfDigits - 1] + findIntegers(x, dp, numOfDigits(x));
         else
-            return cnt + findIntegers(y, dp, numOfDigits - 2);
+            return dp[numOfDigits - 1] + findIntegers(y, dp, numOfDigits - 2);
     }
 
     private int[] dp(int numOfDigits) {

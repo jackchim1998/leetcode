@@ -1,6 +1,5 @@
 package medium;
 
-import medium.Subsets;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -26,7 +25,7 @@ class SubsetsTest {
                 {3},
                 {1, 3},
                 {2, 3},
-                {1, 2, 3},
+                {1, 2, 3}
         }, output);
     }
 

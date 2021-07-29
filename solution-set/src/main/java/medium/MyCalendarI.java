@@ -15,7 +15,7 @@ public class MyCalendarI {
     public boolean book(int start, int end) {
         Integer prev = calendar.floorKey(start);
         Integer next = calendar.ceilingKey(start);
-        if ((prev == null || calendar.get(prev) <= start) && (next == null || end <= next)) {
+        if ((next == null || end <= next) && (prev == null || calendar.get(prev) <= start)) {
             calendar.put(start, end);
             return true;
         }

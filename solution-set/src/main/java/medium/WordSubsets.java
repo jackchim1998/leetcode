@@ -7,10 +7,10 @@ import java.util.List;
  * @author Jack
  */
 public class WordSubsets {
-    public List<String> wordSubsets(String[] A, String[] B) {
+    public List<String> wordSubsets(String[] arrA, String[] arrB) {
         List<String> result = new ArrayList<>();
         int[] globalBCount = new int[26];
-        for (String b : B) {
+        for (String b : arrB) {
             int[] localBCount = new int[26];
             for (char c : b.toCharArray()) {
                 int i = c - 'a';
@@ -18,7 +18,7 @@ public class WordSubsets {
                 globalBCount[i] = Math.max(globalBCount[i], localBCount[i]);
             }
         }
-        for (String a : A) {
+        for (String a : arrA) {
             int[] cnt = new int[26];
             for (char c : a.toCharArray())
                 cnt[c - 'a']++;

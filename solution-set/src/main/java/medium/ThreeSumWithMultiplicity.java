@@ -8,7 +8,7 @@ package medium;
  * 0 <= arr[i] <= 100
  * 0 <= target <= 300
  */
-public class threeSumWithMultiplicity {
+public class ThreeSumWithMultiplicity {
     public int threeSumMulti(int[] arr, int target) {
         int[] cnt = new int[101];
         int[] used = new int[101];
@@ -40,13 +40,13 @@ public class threeSumWithMultiplicity {
                 }
 
                 if (i == j && j == k)
-                    total += (long)cnt[i] * (cnt[i] - 1) * (cnt[i] - 2) / 6;
+                    total += (long) cnt[i] * (cnt[i] - 1) * (cnt[i] - 2) / 6;
                 else if (i == j)
-                    total += (long)cnt[i] * (cnt[i] - 1) * cnt[k] / 2;
+                    total += (long) cnt[i] * (cnt[i] - 1) * cnt[k] / 2;
                 else if (j == k)
-                    total += (long)cnt[j] * (cnt[j] - 1) * cnt[i] / 2;
+                    total += (long) cnt[j] * (cnt[j] - 1) * cnt[i] / 2;
                 else
-                    total += (long)cnt[i] * cnt[j] * cnt[k];
+                    total += (long) cnt[i] * cnt[j] * cnt[k];
                 total %= 1_000_000_007;
                 used[j]--;
                 used[k]--;

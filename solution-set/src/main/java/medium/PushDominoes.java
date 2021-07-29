@@ -18,7 +18,7 @@ public class PushDominoes {
             }
             curr = next;
         }
-        return String.valueOf(arr, 1 ,len-2);
+        return String.valueOf(arr, 1, len - 2);
     }
 
     private void fill(char[] arr, int start, int end, char c) { // inclusive

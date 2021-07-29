@@ -3,7 +3,6 @@ package medium;
 import common.LinkedListBuilder;
 import common.LinkedListUtil;
 import common.ListNode;
-import medium.RemoveNthNodeFromEndOfList;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;

@@ -1,6 +1,5 @@
 package hard;
 
-import hard.CountOfSmallerNumbersAfterSelf;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

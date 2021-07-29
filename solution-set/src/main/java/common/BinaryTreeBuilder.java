@@ -19,7 +19,7 @@ public class BinaryTreeBuilder {
         TreeNode root = new TreeNode(values[0]);
         List<TreeNode> nodes = List.of(root);
         int idx = 1;
-        while (!nodes.isEmpty() && idx < values.length) {
+        while (idx < values.length && !nodes.isEmpty()) {
             List<TreeNode> next = new ArrayList<>(nodes.size() * 2);
             for (TreeNode node : nodes) {
                 node.left = newTreeNode(idx++);

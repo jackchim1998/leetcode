@@ -25,7 +25,7 @@ public class BeautifulArrangement {
         if (num == 0) return 1;
         int cnt = 0;
         for (int i = 1; i <= used.length - 1; i++) {
-            if (!used[i] && (((isValid[num - 1] >> i - 1) & 1) == 1)) {
+            if (!used[i] && (isValid[num - 1] >> i - 1 & 1) == 1) {
                 used[i] = true;
                 cnt += backTracking(used, isValid, num - 1);
                 used[i] = false;

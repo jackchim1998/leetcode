@@ -1,6 +1,5 @@
 package medium;
 
-import medium.KeysAndRooms;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

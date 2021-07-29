@@ -10,7 +10,7 @@ public class CountBinarySubStrings {
         int curr = 1;
         int prev = 0;
         for (int i = 1; i < chars.length; i++) {
-            if (chars[i] != chars[i-1]) {
+            if (chars[i] != chars[i - 1]) {
                 prev = curr;
                 curr = 1;
             } else curr++;

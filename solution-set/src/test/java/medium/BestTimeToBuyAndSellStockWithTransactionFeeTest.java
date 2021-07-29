@@ -1,6 +1,5 @@
 package medium;
 
-import medium.BestTimeToBuyAndSellStockWithTransactionFee;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,7 +27,7 @@ class BestTimeToBuyAndSellStockWithTransactionFeeTest {
 
     @Test
     void example4() {
-        assertEquals(4, solution.maxProfit(new int[]{2,2,1,1,5,5,3,1,5,4}, 2));
+        assertEquals(4, solution.maxProfit(new int[]{2, 2, 1, 1, 5, 5, 3, 1, 5, 4}, 2));
     }
 
 }

@@ -10,19 +10,19 @@ import java.util.Arrays;
  */
 public class ReorderedPowerOf2 {
     // it is quickest, because it only consider 32 cases, and use arrays to avoid permutation
-    public boolean reorderedPowerOf2(int N) {
-        int[] A = count(N);
+    public boolean reorderedPowerOf2(int n) {
+        int[] a = count(n);
         for (int i = 0; i < 31; ++i)
-            if (Arrays.equals(A, count(1 << i)))
+            if (Arrays.equals(a, count(1 << i)))
                 return true;
         return false;
     }
 
-    public int[] count(int N) {
+    public int[] count(int n) {
         int[] ans = new int[10];
-        while (N > 0) {
-            ans[N % 10]++;
-            N /= 10;
+        while (n > 0) {
+            ans[n % 10]++;
+            n /= 10;
         }
         return ans;
     }

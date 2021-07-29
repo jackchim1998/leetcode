@@ -71,7 +71,7 @@ public class SlidingPuzzle {
         final int x;
         final int y;
 
-        public Item(int round, int[][] board, int x, int y) {
+        Item(int round, int[][] board, int x, int y) {
             this.round = round;
             this.board = board;
             this.x = x;

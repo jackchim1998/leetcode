@@ -8,19 +8,19 @@ public class EvaluateReversePolishNotation {
         int[] stack = new int[tokens.length / 2 + 1];
         int pos = 0;
         for (String token : tokens) {
-            if (token.equals("+")) {
+            if ("+".equals(token)) {
                 stack[pos - 2] += stack[pos - 1];
                 pos--;
-            } else if (token.equals("-")) {
+            } else if ("-".equals(token)) {
                 stack[pos - 2] -= stack[pos - 1];
                 pos--;
-            } else if (token.equals("*")){
+            } else if ("*".equals(token)) {
                 stack[pos - 2] *= stack[pos - 1];
                 pos--;
-            }else if (token.equals("/")){
+            } else if ("/".equals(token)) {
                 stack[pos - 2] /= stack[pos - 1];
                 pos--;
-            }else {
+            } else {
                 stack[pos] = Integer.parseInt(token);
                 pos++;
             }

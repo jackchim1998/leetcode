@@ -17,7 +17,7 @@ import java.util.Set;
  * All strings in wordlist and queries consist only of english letters.
  */
 public class VowelSpellchecker {
-    private final static Set<Character> VOWEL = Set.of('a', 'e', 'i', 'o', 'u');
+    private static final Set<Character> VOWEL = Set.of('a', 'e', 'i', 'o', 'u');
 
     public String[] spellchecker(String[] wordlist, String[] queries) {
         LinkedHashSet<String> originalWordSet = new LinkedHashSet<>(Arrays.asList(wordlist));

@@ -23,6 +23,6 @@ public class ConvertSortedListToBST { // we can use slow-fast pointer to find mi
     private TreeNode generate(List<Integer> list, int start, int end) {
         if (start > end) return null;
         int mid = (start + end) / 2;
-        return new TreeNode(list.get(mid), generate(list, start, mid-1), generate(list, mid + 1, end));
+        return new TreeNode(list.get(mid), generate(list, start, mid - 1), generate(list, mid + 1, end));
     }
 }

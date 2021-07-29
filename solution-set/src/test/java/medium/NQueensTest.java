@@ -1,6 +1,5 @@
 package medium;
 
-import medium.NQueens;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

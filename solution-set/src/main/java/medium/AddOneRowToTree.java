@@ -23,8 +23,8 @@ public class AddOneRowToTree {
             node.right = new TreeNode(v, null, node.right);
             return;
         }
-        addNode(node.left, v, d-1);
-        addNode(node.right, v, d-1);
+        addNode(node.left, v, d - 1);
+        addNode(node.right, v, d - 1);
     }
 
     /**

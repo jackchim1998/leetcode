@@ -1,6 +1,5 @@
 package medium;
 
-import medium.DeleteOperationForTwoStrings;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,6 +14,7 @@ class DeleteOperationForTwoStringsTest {
     void example1() {
         assertEquals(4, solution.minDistance("leetcode", "etco"));
     }
+
     @Test
     void example2() {
         assertEquals(3, solution.minDistance("park", "spake"));

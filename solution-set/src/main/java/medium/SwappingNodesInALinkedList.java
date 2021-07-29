@@ -12,7 +12,8 @@ import common.ListNode;
  */
 public class SwappingNodesInALinkedList {
     public ListNode swapNodes(ListNode head, int k) {
-        ListNode left = head, right = head;
+        ListNode left = head;
+        ListNode right = head;
         for (int i = 0; i < k - 1; i++)
             left = left.next;
         ListNode fast = left;

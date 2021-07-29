@@ -24,8 +24,8 @@ public class PalindromePartitioning {
         if (start >= s.length())
             result.add(new ArrayList<>(currList));
         for (int end = start; end < s.length(); end++) {
-            if (s.charAt(start) == s.charAt(end) && (end - start <= 2 || (dp[start + 1] >> (end - 1) & 1) > 0)) {
-                dp[start] |=  (1 << end);
+            if ((end - start <= 2 || (dp[start + 1] >> (end - 1) & 1) > 0) && s.charAt(start) == s.charAt(end)) {
+                dp[start] |= 1 << end;
                 currList.add(s.substring(start, end + 1));
                 dfs(end + 1, result, currList, s, dp);
                 currList.remove(currList.size() - 1);

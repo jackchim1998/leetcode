@@ -9,7 +9,8 @@ package medium;
  */
 public class HouseRobber {
     public int rob(int[] nums) {
-        int rob = 0, notRob = 0;
+        int rob = 0;
+        int notRob = 0;
         for (int num : nums) {
             int prevRob = rob;
             rob = notRob + num;

@@ -1,6 +1,5 @@
 package easy;
 
-import easy.RemoveAllAdjacentDuplicatesInString;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,6 +12,6 @@ class RemoveAllAdjacentDuplicatesInStringTest {
 
     @Test
     void example1() {
-         assertEquals("ay", solution.removeDuplicates("azxxzy"));
+        assertEquals("ay", solution.removeDuplicates("azxxzy"));
     }
 }

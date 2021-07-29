@@ -14,7 +14,7 @@ public class AssertUtil {
         if (n != actual.size()) throw new AssertionFailedError(String.format("OutSide List length diff, expected: %d, actual: %d", n, actual.size()));
         for (int i = 0; i < n; i++)
             if (!expected.get(i).equals(actual.get(i)))
-                throw new AssertionFailedError(String.format("Inside List not matched, expected: %s, actual: %s", expected.get(i),actual.get(i)));
+                throw new AssertionFailedError(String.format("Inside List not matched, expected: %s, actual: %s", expected.get(i), actual.get(i)));
     }
 
 }

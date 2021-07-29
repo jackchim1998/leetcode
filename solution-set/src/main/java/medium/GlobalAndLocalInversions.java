@@ -9,11 +9,11 @@ package medium;
  * The time limit for this problem has been reduced.
  */
 public class GlobalAndLocalInversions {
-    public boolean isIdealPermutation(int[] A) {
+    public boolean isIdealPermutation(int[] a) {
         int max = -1;
-        for (int i=2; i<A.length;i++) {
-            max = Math.max(max, A[i-2]);
-            if (A[i] < max)
+        for (int i = 2; i < a.length; i++) {
+            max = Math.max(max, a[i - 2]);
+            if (a[i] < max)
                 return false;
         }
         return true;

@@ -42,12 +42,12 @@ public class NestedIterator implements Iterator<Integer> {
         private final int value;
         private final List<NestedInteger> list;
 
-        public NestedInteger(int value) {
+        NestedInteger(int value) {
             this.value = value;
             this.list = null;
         }
 
-        public NestedInteger(List<NestedInteger> list) {
+        NestedInteger(List<NestedInteger> list) {
             this.value = -1;
             this.list = list;
         }

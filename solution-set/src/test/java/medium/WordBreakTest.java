@@ -1,6 +1,5 @@
 package medium;
 
-import medium.WordBreak;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -21,16 +20,16 @@ class WordBreakTest {
 
     @Test
     void example2() {
-        assertTrue(solution.wordBreak("applepenapple", List.of("apple","pen")));
+        assertTrue(solution.wordBreak("applepenapple", List.of("apple", "pen")));
     }
 
     @Test
     void example3() {
-        assertFalse(solution.wordBreak("catsandog", List.of("cats","dog","sand","and","cat")));
+        assertFalse(solution.wordBreak("catsandog", List.of("cats", "dog", "sand", "and", "cat")));
     }
 
     @Test
     void example4() {
-        assertFalse(solution.wordBreak("aaaaaaa", List.of("aaa","aaaaa")));
+        assertFalse(solution.wordBreak("aaaaaaa", List.of("aaa", "aaaaa")));
     }
 }

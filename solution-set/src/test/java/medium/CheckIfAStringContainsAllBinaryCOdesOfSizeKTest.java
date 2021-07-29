@@ -1,6 +1,5 @@
 package medium;
 
-import medium.CheckIfAStringContainsAllBinaryCOdesOfSizeK;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

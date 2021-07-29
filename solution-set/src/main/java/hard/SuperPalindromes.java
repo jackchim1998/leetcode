@@ -29,7 +29,7 @@ public class SuperPalindromes {
         return n == rev;
     }
 
-    private static class PalindromicIterator {
+    private static final class PalindromicIterator {
         long next;
 
         private PalindromicIterator(long l) {

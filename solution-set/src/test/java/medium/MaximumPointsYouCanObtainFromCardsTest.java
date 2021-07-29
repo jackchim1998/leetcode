@@ -1,6 +1,5 @@
 package medium;
 
-import medium.MaximumPointsYouCanObtainFromCards;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,6 +12,6 @@ class MaximumPointsYouCanObtainFromCardsTest {
 
     @Test
     void example1() {
-        assertEquals(12, solution.maxScore(new int[]{1,2,3,4,5,6,1}, 3));
+        assertEquals(12, solution.maxScore(new int[]{1, 2, 3, 4, 5, 6, 1}, 3));
     }
 }

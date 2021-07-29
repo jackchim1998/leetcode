@@ -13,9 +13,9 @@ class LowestCommonAncestorOfABinaryTreeTest {
     private final LowestCommonAncestorOfABinaryTree solution = new LowestCommonAncestorOfABinaryTree();
 
     @Test
-    void example1 () {
+    void example1() {
         TreeNode root = new BinaryTreeBuilder(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4}).build();
         TreeNode treeNode = solution.lowestCommonAncestor(root, root.left, root.right);
-        assertEquals(root,treeNode);
+        assertEquals(root, treeNode);
     }
 }

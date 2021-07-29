@@ -9,7 +9,8 @@ package medium;
  */
 public class WiggleSubsequence { // official solution is more clean
     public int wiggleMaxLength(int[] nums) {
-        int cnt = 0, idx = 1;
+        int cnt = 0;
+        int idx = 1;
         boolean direction = false;
         while (idx < nums.length) {
             if (nums[idx] - nums[idx - 1] != 0) {

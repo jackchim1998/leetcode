@@ -19,9 +19,9 @@ class UniqueBinarySearchTreeIITest {
     void example1() {
         List<TreeNode> roots = solution.generateTrees(1);
         TreeNode[] answers = new TreeNode[]{
-                new BinaryTreeBuilder(new Integer[]{1}).build(),
+                new BinaryTreeBuilder(new Integer[]{1}).build()
         };
-        isMatched(roots,answers);
+        isMatched(roots, answers);
     }
 
     @Test
@@ -29,22 +29,22 @@ class UniqueBinarySearchTreeIITest {
         List<TreeNode> roots = solution.generateTrees(2);
         TreeNode[] answers = new TreeNode[]{
                 new BinaryTreeBuilder(new Integer[]{1, null, 2}).build(),
-                new BinaryTreeBuilder(new Integer[]{2, 1, null}).build(),
+                new BinaryTreeBuilder(new Integer[]{2, 1, null}).build()
         };
-        isMatched(roots,answers);
+        isMatched(roots, answers);
     }
 
     @Test
     void example3() {
         List<TreeNode> roots = solution.generateTrees(3);
         TreeNode[] answers = new TreeNode[]{
-                new BinaryTreeBuilder(new Integer[]{1, null, 3,  2}).build(),
-                new BinaryTreeBuilder(new Integer[]{1, null, 2,  null, 3}).build(),
+                new BinaryTreeBuilder(new Integer[]{1, null, 3, 2}).build(),
+                new BinaryTreeBuilder(new Integer[]{1, null, 2, null, 3}).build(),
                 new BinaryTreeBuilder(new Integer[]{2, 1, 3}).build(),
                 new BinaryTreeBuilder(new Integer[]{3, 2, null, 1, null}).build(),
                 new BinaryTreeBuilder(new Integer[]{3, 1, null, null, 2}).build()
         };
-        isMatched(roots,answers);
+        isMatched(roots, answers);
     }
 
     private void isMatched(List<TreeNode> roots, TreeNode[] answers) {

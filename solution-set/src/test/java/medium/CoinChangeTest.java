@@ -1,6 +1,5 @@
 package medium;
 
-import medium.CoinChange;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,7 +12,7 @@ class CoinChangeTest {
 
     @Test
     void example1() {
-        assertEquals(3, solution.coinChange(new int[]{1,2,5}, 11));
+        assertEquals(3, solution.coinChange(new int[]{1, 2, 5}, 11));
     }
 
     @Test
@@ -38,6 +37,6 @@ class CoinChangeTest {
 
     @Test
     void example6() {
-        assertEquals(20, solution.coinChange(new int[]{186,419,83,408}, 6249));
+        assertEquals(20, solution.coinChange(new int[]{186, 419, 83, 408}, 6249));
     }
 }

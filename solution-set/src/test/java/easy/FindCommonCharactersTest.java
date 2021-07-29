@@ -1,6 +1,5 @@
 package easy;
 
-import easy.FindCommonCharacters;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

@@ -55,17 +55,6 @@ public class CountOfSmallerNumbersAfterSelf {
         System.arraycopy(tmp, 0, items, l, tmp.length);
     }
 
-    private static class Item {
-        private final int val;
-        private final int idx;
-        private int cnt = 0;
-
-        private Item(int idx, int val) {
-            this.idx = idx;
-            this.val = val;
-        }
-    }
-
     private void inPlaceMerge(Item[] items, int l, int m, int r) {
         int idxL = m;
         int idxR = r;
@@ -92,5 +81,16 @@ public class CountOfSmallerNumbersAfterSelf {
         }
         for (int i = l; i <= idxL; i++)
             items[i].cnt += rSideCnt;
+    }
+
+    private static final class Item {
+        private final int val;
+        private final int idx;
+        private int cnt = 0;
+
+        private Item(int idx, int val) {
+            this.idx = idx;
+            this.val = val;
+        }
     }
 }

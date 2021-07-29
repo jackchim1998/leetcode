@@ -1,6 +1,5 @@
 package medium;
 
-import medium.RedundantConnection;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,6 +22,7 @@ class RedundantConnectionTest {
         assertEquals(1, result[0]);
         assertEquals(4, result[1]);
     }
+
     @Test
     void example2() {
         int[] result = solution.findRedundantConnection(new int[][]{

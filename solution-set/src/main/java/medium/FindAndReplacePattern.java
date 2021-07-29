@@ -22,8 +22,8 @@ public class FindAndReplacePattern {
         for (int i = 0; i < chars.length; i++) {
             int c = chars[i] - 'a' + 1;
             int idx = pattern.charAt(i) - 'a';
-            int location = 1 << c;
             if (mapping[idx] == 0) {
+                int location = 1 << c;
                 mapping[idx] = c;
                 if ((used & location) != 0) return false;
                 used |= location;

@@ -24,6 +24,6 @@ class HouseRobberIIITest {
 
     @Test
     void example3() {
-        assertEquals(7, solution.rob(new BinaryTreeBuilder(new Integer[]{4, 1, null, 2, null,  3}).build()));
+        assertEquals(7, solution.rob(new BinaryTreeBuilder(new Integer[]{4, 1, null, 2, null, 3}).build()));
     }
 }

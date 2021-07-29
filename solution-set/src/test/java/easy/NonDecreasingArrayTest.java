@@ -1,6 +1,5 @@
 package easy;
 
-import easy.NonDecreasingArray;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -39,6 +38,6 @@ class NonDecreasingArrayTest {
 
     @Test
     void example6() {
-        assertTrue(solution.checkPossibility(new int[]{5,7,1,8}));
+        assertTrue(solution.checkPossibility(new int[]{5, 7, 1, 8}));
     }
 }

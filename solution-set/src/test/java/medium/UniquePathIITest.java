@@ -1,6 +1,5 @@
 package medium;
 
-import medium.UniquePathII;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,6 +17,6 @@ class UniquePathIITest {
                 {0, 1, 0},
                 {0, 0, 0}
         });
-        assertEquals (2, result);
+        assertEquals(2, result);
     }
 }

@@ -17,7 +17,7 @@ public class PalindromicStrings {
 
     int expand(char[] chars, int start, int end) { // use iteration is quicker than recursion
         int ans = 0;
-        while (start >= 0 && end <chars.length) {
+        while (start >= 0 && end < chars.length) {
             if (chars[start] != chars[end]) break;
             start--;
             end++;

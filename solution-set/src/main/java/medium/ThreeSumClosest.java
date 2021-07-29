@@ -18,7 +18,7 @@ public class ThreeSumClosest {
                 int val = nums[i] + nums[left] + nums[right];
                 int diff = val - target;
                 int absDiff = Math.abs(diff);
-                if (absDiff < absClosestDiff){
+                if (absDiff < absClosestDiff) {
                     closestVal = val;
                     absClosestDiff = absDiff;
                 }

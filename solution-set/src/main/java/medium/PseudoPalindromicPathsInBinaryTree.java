@@ -32,7 +32,7 @@ public class PseudoPalindromicPathsInBinaryTree {
 
     private boolean isPalindromic(int r) {
         int oneCount = 0;
-        while(r != 0) {
+        while (r != 0) {
             if ((r & 1) >= 1)
                 oneCount++;
             r >>>= 1;

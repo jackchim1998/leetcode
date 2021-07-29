@@ -28,7 +28,9 @@ public class FlipBinaryTreeToMatchPreorderTraversal {
                 node.right = tmp;
                 results.add(node.val);
             }
-            return isInvalid(node.left, voyage, results) || node.right.val != voyage[idx] || isInvalid(node.right, voyage, results);
+            if (isInvalid(node.left, voyage, results)) return true;
+            if (node.right.val != voyage[idx]) return true;
+            return isInvalid(node.right, voyage, results);
         } else if (node.left != null) return node.left.val != voyage[idx] || isInvalid(node.left, voyage, results);
         else if (node.right != null) return node.right.val != voyage[idx] || isInvalid(node.right, voyage, results);
         return false;

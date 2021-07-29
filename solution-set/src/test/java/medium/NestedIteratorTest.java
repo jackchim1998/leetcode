@@ -1,6 +1,5 @@
 package medium;
 
-import medium.NestedIterator;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

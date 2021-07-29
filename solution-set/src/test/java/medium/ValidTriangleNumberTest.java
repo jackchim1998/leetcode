@@ -35,7 +35,7 @@ class ValidTriangleNumberTest {
 
     @Test
     void example5() {
-        int result = solution.triangleNumber(new int[]{95,81,22,28,46,46,27,86,35,96});
+        int result = solution.triangleNumber(new int[]{95, 81, 22, 28, 46, 46, 27, 86, 35, 96});
         Assertions.assertEquals(62, result);
     }
 }

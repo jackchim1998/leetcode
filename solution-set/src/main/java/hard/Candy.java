@@ -22,7 +22,7 @@ public class Candy {
             candy = Math.max(candy, candies[i - 1] + 1);
         }
         if (i < candies.length - 1 && ratings[i + 1] < ratings[i]) {
-            if (candies[i + 1] == 0)  calculate(ratings, candies, i + 1);
+            if (candies[i + 1] == 0) calculate(ratings, candies, i + 1);
             candy = Math.max(candy, candies[i + 1] + 1);
         }
         candies[i] = candy;

@@ -1,7 +1,5 @@
 package medium;
 
-import java.util.logging.Level;
-
 /**
  * @author Jack
  */

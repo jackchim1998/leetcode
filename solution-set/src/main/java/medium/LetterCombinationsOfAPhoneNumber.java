@@ -33,9 +33,9 @@ public class LetterCombinationsOfAPhoneNumber {
                 for (int j = 1; j < choices; j++)
                     for (int i = 0; i < size; i++)
                         tmp.add(new StringBuilder(tmp.get(i)));
-                    for (int i=0; i<choices; i++)
-                        for (int j=0; j<size;j++)
-                            tmp.get(i*size + j).append(letters[digits.charAt(idx) - '2'][i]);
+                for (int i = 0; i < choices; i++)
+                    for (int j = 0; j < size; j++)
+                        tmp.get(i * size + j).append(letters[digits.charAt(idx) - '2'][i]);
             }
             idx++;
         }

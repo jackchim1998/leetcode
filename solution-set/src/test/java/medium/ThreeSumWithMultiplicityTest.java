@@ -1,14 +1,13 @@
 package medium;
 
-import medium.threeSumWithMultiplicity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
  * @author Jack
  */
-class threeSumWithMultiplicityTest {
-    private final threeSumWithMultiplicity solution = new threeSumWithMultiplicity();
+class ThreeSumWithMultiplicityTest {
+    private final ThreeSumWithMultiplicity solution = new ThreeSumWithMultiplicity();
 
     @Test
     void example1() {

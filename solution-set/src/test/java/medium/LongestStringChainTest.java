@@ -1,6 +1,5 @@
 package medium;
 
-import medium.LongestStringChain;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,7 +12,7 @@ class LongestStringChainTest {
 
     @Test
     void example1() {
-        assertEquals(4, solution.longestStrChain(new String[]{"a","b","ba","bca","bda","bdca"}));
+        assertEquals(4, solution.longestStrChain(new String[]{"a", "b", "ba", "bca", "bda", "bdca"}));
     }
 
 }

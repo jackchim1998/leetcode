@@ -16,16 +16,16 @@ import java.util.stream.Collectors;
  * 0 <= B[i] <= 10^9
  */
 public class AdvantageShuffle {
-    public int[] advantageCount(int[] A, int[] B) {
-        Arrays.sort(A);
-        LinkedList<Integer> list = Arrays.stream(A).boxed().collect(Collectors.toCollection(LinkedList::new));
+    public int[] advantageCount(int[] a, int[] b) {
+        Arrays.sort(a);
+        LinkedList<Integer> list = Arrays.stream(a).boxed().collect(Collectors.toCollection(LinkedList::new));
         List<Integer> index = new ArrayList<>();
-        for (int i = 0; i < B.length; i++) {
+        for (int i = 0; i < b.length; i++) {
             boolean ok = false;
             for (Integer v : list) {
-                if (v > B[i]) {
+                if (v > b[i]) {
                     ok = true;
-                    A[i] = v;
+                    a[i] = v;
                     list.remove(v);
                     break;
                 }
@@ -35,8 +35,8 @@ public class AdvantageShuffle {
             }
         }
         for (int i : index)
-            A[i] = list.pollFirst();
-        return A;
+            a[i] = list.pollFirst();
+        return a;
     }
     /**
      * Below code works and is slow, because treeMap need rebalance

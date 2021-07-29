@@ -1,6 +1,5 @@
 package medium;
 
-import medium.BrickWalls;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

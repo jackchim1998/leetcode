@@ -14,7 +14,8 @@ public class HouseRobberII {
     }
 
     public int rob(int[] nums, int start, int end) {
-        int rob = 0, notRob = 0;
+        int rob = 0;
+        int notRob = 0;
         for (; start <= end; start++) {
             int prevRob = rob;
             rob = notRob + nums[start];

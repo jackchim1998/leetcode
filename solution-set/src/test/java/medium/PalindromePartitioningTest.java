@@ -1,6 +1,5 @@
 package medium;
 
-import medium.PalindromePartitioning;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -55,7 +54,7 @@ class PalindromePartitioningTest {
     private String listToString(List<String> list) {
         StringBuilder sb = new StringBuilder();
         sb.append("list: ");
-        for(String s : list)
+        for (String s : list)
             sb.append(s).append(' ');
         return sb.toString();
     }

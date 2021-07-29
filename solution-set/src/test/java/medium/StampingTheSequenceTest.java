@@ -1,6 +1,5 @@
 package medium;
 
-import medium.StampingTheSequence;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

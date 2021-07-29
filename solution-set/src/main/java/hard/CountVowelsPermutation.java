@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author Jack
  */
 public class CountVowelsPermutation {
-    private static int MOD = 1_000_000_007;
+    private static final int MOD = 1_000_000_007;
 
     public int countVowelPermutation(int n) {
         int[] vowels = new int[5];

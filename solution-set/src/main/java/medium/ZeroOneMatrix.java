@@ -1,61 +1,41 @@
 package medium;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author Jack
  * 1 <= m, n <= 10^4
  * 1 <= m * n <= 10^4
  */
-public class ZeroOneMatrix { // bfs
+public class ZeroOneMatrix {
     public int[][] updateMatrix(int[][] mat) {
         int m = mat.length;
         int n = mat[0].length;
-        List<Coordinate> coordinates = new ArrayList<>();
-        for (int i = 0; i < m; i++)
-            for (int j = 0; j < n; j++) {
-                if (mat[i][j] == 1) mat[i][j] = Integer.MAX_VALUE;
-                else coordinates.add(new Coordinate(i, j));
-            }
 
-        int level = 0;
-        while (!coordinates.isEmpty()) {
-            List<Coordinate> newCoordinates = new ArrayList<>();
-            for (Coordinate coordinate : coordinates) {
-                int x = coordinate.x;
-                int y = coordinate.y;
-                if (x > 0 && mat[x - 1][y] > level) {
-                    mat[x - 1][y] = level + 1;
-                    newCoordinates.add(new Coordinate(x - 1, y));
-                }
-                if (x < m - 1 && mat[x + 1][y] > level) {
-                    mat[x + 1][y] = level + 1;
-                    newCoordinates.add(new Coordinate(x + 1, y));
-                }
-                if (y > 0 && mat[x][y - 1] > level) {
-                    mat[x][y - 1] = level + 1;
-                    newCoordinates.add(new Coordinate(x, y - 1));
-                }
-                if (y < n - 1 && mat[x][y + 1] > level) {
-                    mat[x][y + 1] = level + 1;
-                    newCoordinates.add(new Coordinate(x, y + 1));
-                }
-            }
-            level++;
-            coordinates = newCoordinates;
-        }
+        //consider left, down
+        if (mat[0][0] == 1)
+            mat[0][0] = m + n;
+        for (int i = 1; i < m; i++)
+            if (mat[i][0] == 1)
+                mat[i][0] = mat[i - 1][0] + 1;
+        for (int j = 1; j < n; j++)
+            if (mat[0][j] == 1)
+                mat[0][j] = mat[0][j - 1] + 1;
+        for (int i = 1; i < m; i++)
+            for (int j = 1; j < n; j++)
+                if (mat[i][j] == 1)
+                    mat[i][j] = Math.min(mat[i - 1][j], mat[i][j - 1]) + 1;
 
+        //consider right, up
+        for (int i = m - 2; i >= 0; i--)
+            if (mat[i][n - 1] > 0)
+                mat[i][n - 1] = Math.min(mat[i][n - 1], mat[i + 1][n - 1] + 1);
+        for (int j = n - 2; j >= 0; j--)
+            if (mat[m - 1][j] > 0)
+                mat[m - 1][j] = Math.min(mat[m - 1][j], mat[m - 1][j + 1] + 1);
+        for (int i = m - 2; i >= 0; i--)
+            for (int j = n - 2; j >= 0; j--)
+                if (mat[i][j] > 0)
+                    mat[i][j] = Math.min(Math.min(mat[i][j], mat[i + 1][j] + 1), mat[i][j + 1] + 1);
         return mat;
     }
 
-    private static final class Coordinate {
-        final int x;
-        final int y;
-
-        public Coordinate(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
 }

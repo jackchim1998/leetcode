@@ -4,7 +4,6 @@ package common;
 import org.opentest4j.AssertionFailedError;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -41,7 +40,5 @@ public class AssertUtil {
         intersection.retainAll(actual);
         return intersection.size() == n;
     }
-//            throw new AssertionFailedError(String.format("Inside List length diff, expected: %d, actual: %d", n, actual.size()));
-//            throw new AssertionFailedError(String.format("Inside List not matched, expected: %s, actual: %s", expected, actual));
 
 }

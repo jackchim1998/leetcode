@@ -18,6 +18,30 @@ public class AssertUtil {
                 throw new AssertionFailedError(String.format("Inside List not matched, expected: %s, actual: %s", expected.get(i), actual.get(i)));
     }
 
+    public static void assertEquals(int[][] expected, int[][] actual) {
+        int m = expected.length;
+        if (m != actual.length) throw new AssertionFailedError(String.format("expected: %s actual: %s", toString(expected), toString(actual)));
+        for (int i = 0; i < m; i++) {
+            int n = expected[i].length;
+            if (n != actual[i].length) throw new AssertionFailedError(String.format("expected: %s actual: %s", toString(expected), toString(actual)));
+            for (int j = 0; j < n; j++)
+                if (expected[i][j] != actual[i][j])
+                    throw new AssertionFailedError(String.format("expected: %s actual: %s", toString(expected), toString(actual)));
+        }
+    }
+
+    private static String toString(int[][] matrix) {
+        var sb = new StringBuilder().append('\n');
+        for (int[] row : matrix) {
+            for (int j = 0; j < row.length; j++) {
+                if (j > 0) sb.append(',');
+                sb.append(String.format("%2d", row[j]));
+            }
+            sb.append('\n');
+        }
+        return sb.toString();
+    }
+
     public static <T> void assertEqualsIgnoreOrders(List<List<T>> expected, List<List<T>> actual) {
         int n = expected.size();
         if (n != actual.size()) throw new AssertionFailedError(String.format("OutSide List length diff, expected: %d, actual: %d", n, actual.size()));

@@ -1,5 +1,6 @@
 package medium;
 
+import common.AssertUtil;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -17,10 +18,12 @@ class ZeroOneMatrixTest {
                 {0, 1, 0},
                 {0, 0, 0}
         };
-        int[][] result = solution.updateMatrix(input);
-        assertArrayEquals(new int[]{0, 0, 0}, result[0]);
-        assertArrayEquals(new int[]{0, 1, 0}, result[1]);
-        assertArrayEquals(new int[]{0, 0, 0}, result[2]);
+        int[][] actual = {
+                {0, 0, 0},
+                {0, 1, 0},
+                {0, 0, 0}
+        };
+        AssertUtil.assertEquals(actual, solution.updateMatrix(input));
     }
 
     @Test
@@ -30,10 +33,12 @@ class ZeroOneMatrixTest {
                 {0, 1, 0},
                 {1, 1, 1}
         };
-        int[][] result = solution.updateMatrix(input);
-        assertArrayEquals(new int[]{0, 0, 0}, result[0]);
-        assertArrayEquals(new int[]{0, 1, 0}, result[1]);
-        assertArrayEquals(new int[]{1, 2, 1}, result[2]);
+        int[][] actual = {
+                {0, 0, 0},
+                {0, 1, 0},
+                {1, 2, 1}
+        };
+        AssertUtil.assertEquals(actual, solution.updateMatrix(input));
     }
 
     @Test
@@ -45,12 +50,14 @@ class ZeroOneMatrixTest {
                 {1, 0, 1, 1, 1},
                 {1, 0, 0, 0, 1}
         };
-        int[][] result = solution.updateMatrix(input);
-        assertArrayEquals(new int[]{0, 1, 0, 1, 2}, result[0]);
-        assertArrayEquals(new int[]{1, 1, 0, 0, 1}, result[1]);
-        assertArrayEquals(new int[]{0, 0, 0, 1, 0}, result[2]);
-        assertArrayEquals(new int[]{1, 0, 1, 1, 1}, result[3]);
-        assertArrayEquals(new int[]{1, 0, 0, 0, 1}, result[4]);
+        int[][] actual = {
+                {0, 1, 0, 1, 2},
+                {1, 1, 0, 0, 1},
+                {0, 0, 0, 1, 0},
+                {1, 0, 1, 1, 1},
+                {1, 0, 0, 0, 1}
+        };
+        AssertUtil.assertEquals(actual, solution.updateMatrix(input));
     }
 
 }

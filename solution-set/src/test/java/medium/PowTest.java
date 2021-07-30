@@ -22,7 +22,7 @@ class PowTest {
 
     @Test
     void example3() {
-        assertEquals(Math.pow(2,-2), solution.myPow(2, -2));
+        assertEquals(Math.pow(2, -2), solution.myPow(2, -2));
     }
 
     @Test

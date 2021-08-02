@@ -2,8 +2,7 @@ package medium;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -38,14 +37,11 @@ class BeautifulArrangementIITest {
 
     private void validate(int[] arr, int n, int k) {
         assertNotNull(arr);
-        Map<Integer, Boolean> exist = new HashMap<>();
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-            assertTrue(arr[i] <= n && arr[i] >= 1);
-            if (i > 0)
-                exist.put(Math.abs(arr[i] - arr[i - 1]), true);
-        }
-        System.out.println();
+        HashSet<Integer> exist = new HashSet<>();
+        for (int ele : arr)
+            assertTrue(ele <= n && ele >= 1);
+        for (int i = 1; i < arr.length; i++)
+            exist.add(Math.abs(arr[i] - arr[i - 1]));
         assertEquals(k, exist.size());
     }
 }

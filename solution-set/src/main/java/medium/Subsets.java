@@ -13,11 +13,9 @@ import java.util.List;
  */
 public class Subsets {
     public List<List<Integer>> subsets(int[] nums) {
-        int i = (1 << nums.length) - 1;
         List<List<Integer>> result = new ArrayList<>();
-        result.add(new ArrayList<>());
-        while (i > 0)
-            result.add(subset(i--, nums));
+        for (int flag = (1 << nums.length) - 1; flag > -1; flag--)
+            result.add(subset(flag, nums));
         return result;
     }
 

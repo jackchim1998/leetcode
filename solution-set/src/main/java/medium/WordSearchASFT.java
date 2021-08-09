@@ -4,9 +4,11 @@ package medium;
  * @author Jack
  */
 public class WordSearchASFT { // TODO @Jack Accepted Solution but Failed Test cases
-    int m, n;
+    int m;
+    int n;
     char grid[][];
     String input;
+
     public boolean exist(char[][] board, String word) {
         //1st idea: dfs through the matrix to find the word
         m = board.length;
@@ -14,10 +16,10 @@ public class WordSearchASFT { // TODO @Jack Accepted Solution but Failed Test ca
         grid = board;
         input = word;
 
-        for(int i = 0; i < m; i++){
-            for(int j = 0; j < n; j++){
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 //we could go backwards so we have to have a new visited array every time.
-                if(dfs(i, j, new boolean[m][n], word.length() - 1))
+                if (dfs(i, j, new boolean[m][n], word.length() - 1))
                     return true;
             }
         }
@@ -26,24 +28,23 @@ public class WordSearchASFT { // TODO @Jack Accepted Solution but Failed Test ca
     }
 
     //the idea was perfect, but the key was to have that if condition at the end.
-    public boolean dfs(int i, int j, boolean[][] visited, int index){
+    public boolean dfs(int i, int j, boolean[][] visited, int index) {
         //the word has been found or 'completed'
-        if(index < 0 )
+        if (index < 0)
             return true;
 
         //all of the stopping conditions.
-        if(i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] != input.charAt(index) || visited[i][j])
+        if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || visited[i][j] || grid[i][j] != input.charAt(index))
             return false;
 
         visited[i][j] = true;
         --index;
 
         //check the surrounding regions.
-        return dfs(i, j+1, visited, index) || dfs(i + 1, j, visited, index) || dfs(i, j - 1, visited, index) ||
-                dfs(i-1, j, visited, index);
+        return dfs(i, j + 1, visited, index) || dfs(i + 1, j, visited, index) || dfs(i, j - 1, visited, index) || dfs(i - 1, j, visited, index);
 
 
         // return false;
-    }//
+    }
 
 }

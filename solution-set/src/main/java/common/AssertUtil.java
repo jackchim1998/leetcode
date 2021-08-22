@@ -30,12 +30,36 @@ public class AssertUtil {
         }
     }
 
+    public static void assertEquals(char[][] expected, char[][] actual) {
+        int m = expected.length;
+        if (m != actual.length) throw new AssertionFailedError(String.format("expected: %s actual: %s", toString(expected), toString(actual)));
+        for (int i = 0; i < m; i++) {
+            int n = expected[i].length;
+            if (n != actual[i].length) throw new AssertionFailedError(String.format("expected: %s actual: %s", toString(expected), toString(actual)));
+            for (int j = 0; j < n; j++)
+                if (expected[i][j] != actual[i][j])
+                    throw new AssertionFailedError(String.format("expected: %s actual: %s", toString(expected), toString(actual)));
+        }
+    }
+
     private static String toString(int[][] matrix) {
         var sb = new StringBuilder().append('\n');
         for (int[] row : matrix) {
             for (int j = 0; j < row.length; j++) {
                 if (j > 0) sb.append(',');
                 sb.append(String.format("%2d", row[j]));
+            }
+            sb.append('\n');
+        }
+        return sb.toString();
+    }
+
+    private static String toString(char[][] matrix) {
+        var sb = new StringBuilder().append('\n');
+        for (char[] row : matrix) {
+            for (int j = 0; j < row.length; j++) {
+                if (j > 0) sb.append(',');
+                sb.append(String.format("%c", row[j]));
             }
             sb.append('\n');
         }

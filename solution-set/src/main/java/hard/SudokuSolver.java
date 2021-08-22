@@ -21,13 +21,12 @@ public class SudokuSolver {
         determineHorizontal(possible, board, x);
         determineVertical(possible, board, y);
         determineBlock(possible, board, x, y);
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 9; i++)
             if (possible[i]) {
                 board[x][y] = (char) (i + (int) '1');
                 if (backtracking(board, newX, newY))
                     return true;
             }
-        }
         board[x][y] = '.';
         return false;
     }

@@ -5,8 +5,8 @@ package medium;
  */
 public class ComplexNumberMultiplication {
     public String complexNumberMultiply(String num1, String num2) {
-        String x[] = num1.split("[+i]");
-        String y[] = num2.split("[+i]");
+        String[] x = num1.split("[+i]");
+        String[] y = num2.split("[+i]");
         int a_real = Integer.parseInt(x[0]);
         int a_img = Integer.parseInt(x[1]);
         int b_real = Integer.parseInt(y[0]);

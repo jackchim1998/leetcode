@@ -11,7 +11,9 @@ public class ReverseOnlyLetters {
             if (Character.isLetter(chars[start])) {
                 chars[start] = s.charAt(end);
                 chars[end] = s.charAt(start);
-                do end--; while (end >= 0 && !Character.isLetter(chars[end]));
+                do {
+                    end--;
+                } while (end >= 0 && !Character.isLetter(chars[end]));
             }
             start++;
         }

@@ -2,7 +2,8 @@ package medium;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LargestPlusSignTest {
     private final LargestPlusSign solution = new LargestPlusSign();

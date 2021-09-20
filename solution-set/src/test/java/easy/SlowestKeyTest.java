@@ -2,7 +2,8 @@ package easy;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SlowestKeyTest {
     private final SlowestKey solution = new SlowestKey();

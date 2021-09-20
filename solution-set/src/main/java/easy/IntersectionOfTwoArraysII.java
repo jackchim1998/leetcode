@@ -1,6 +1,9 @@
 package easy;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class IntersectionOfTwoArraysII {
     public int[] intersect(int[] nums1, int[] nums2) {
@@ -16,7 +19,7 @@ public class IntersectionOfTwoArraysII {
             }
         }
         int[] result = new int[intersection.size()];
-        for (int i=0;i<intersection.size();i++)
+        for (int i = 0; i < intersection.size(); i++)
             result[i] = intersection.get(i);
         return result;
     }

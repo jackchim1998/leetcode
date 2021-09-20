@@ -2,7 +2,8 @@ package medium;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LongestTurbulentSubarrayTest {
     private final LongestTurbulentSubarray solution = new LongestTurbulentSubarray();
@@ -27,7 +28,7 @@ class LongestTurbulentSubarrayTest {
 
     @Test
     void example4() {
-        int result = solution.maxTurbulenceSize(new int[]{0,8,45,88,48,68,28,55,17,24});
+        int result = solution.maxTurbulenceSize(new int[]{0, 8, 45, 88, 48, 68, 28, 55, 17, 24});
         assertEquals(8, result);
     }
 }

@@ -6,7 +6,8 @@ import common.ListNode;
 import org.junit.jupiter.api.Test;
 
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SplitLinkedListInPartsTest {
     private final SplitLinkedListInParts solution = new SplitLinkedListInParts();
@@ -15,13 +16,7 @@ class SplitLinkedListInPartsTest {
     void example1() {
         int k = 5;
         ListNode input = new LinkedListBuilder(new int[]{1, 2, 3}).build();
-        ListNode[] expected = new ListNode[]{
-                new LinkedListBuilder(new int[]{1}).build(),
-                new LinkedListBuilder(new int[]{2}).build(),
-                new LinkedListBuilder(new int[]{3}).build(),
-                null,
-                null
-        };
+        ListNode[] expected = new ListNode[]{new LinkedListBuilder(new int[]{1}).build(), new LinkedListBuilder(new int[]{2}).build(), new LinkedListBuilder(new int[]{3}).build(), null, null};
         validate(expected, input, k);
     }
 
@@ -29,11 +24,7 @@ class SplitLinkedListInPartsTest {
     void example2() {
         int k = 3;
         ListNode input = new LinkedListBuilder(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}).build();
-        ListNode[] expected = new ListNode[]{
-                new LinkedListBuilder(new int[]{1, 2, 3, 4}).build(),
-                new LinkedListBuilder(new int[]{5, 6, 7}).build(),
-                new LinkedListBuilder(new int[]{8, 9, 10}).build()
-        };
+        ListNode[] expected = new ListNode[]{new LinkedListBuilder(new int[]{1, 2, 3, 4}).build(), new LinkedListBuilder(new int[]{5, 6, 7}).build(), new LinkedListBuilder(new int[]{8, 9, 10}).build()};
         validate(expected, input, k);
     }
 

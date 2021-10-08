@@ -16,7 +16,7 @@ public class UniqueEmailAddresses {
             for (int i = 0; i < addSignIdx; i++)
                 if (chars[i] != '.')
                     sb.append(chars[i]);
-            sb.append(chars, emailSignIdx , chars.length - emailSignIdx );
+            sb.append(chars, emailSignIdx, chars.length - emailSignIdx);
             set.add(sb.toString());
         }
         return set.size();

@@ -4,7 +4,8 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 class MaximumLengthOfAConcatenatedStringWithUniqueCharactersTest {
     private final MaximumLengthOfAConcatenatedStringWithUniqueCharacters solution = new MaximumLengthOfAConcatenatedStringWithUniqueCharacters();

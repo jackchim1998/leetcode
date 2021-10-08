@@ -56,7 +56,7 @@ public class ShortestPathInAGridWithObstaclesElimination {
         private final int y;
         private final int k;
 
-        public Point(int x, int y, int k) {
+        Point(int x, int y, int k) {
             this.x = x;
             this.y = y;
             this.k = k;

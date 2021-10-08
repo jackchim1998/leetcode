@@ -44,7 +44,7 @@ public class MaximumLengthOfAConcatenatedStringWithUniqueCharacters {
         final int bits;
         final int len;
 
-        public Element(int bits, int len) {
+        Element(int bits, int len) {
             this.bits = bits;
             this.len = len;
         }

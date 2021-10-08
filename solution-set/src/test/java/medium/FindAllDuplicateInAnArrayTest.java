@@ -4,7 +4,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class FindAllDuplicateInAnArrayTest {
     private final FindAllDuplicateInAnArray solution = new FindAllDuplicateInAnArray();

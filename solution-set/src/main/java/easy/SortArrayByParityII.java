@@ -2,7 +2,9 @@ package easy;
 
 public class SortArrayByParityII {
     public int[] sortArrayByParityII(int[] nums) {
-        int evenIdx = 0, oddIdx = 1, len = nums.length;
+        int evenIdx = 0;
+        int oddIdx = 1;
+        int len = nums.length;
         while (evenIdx < len && oddIdx < len) {
             while (evenIdx < len && nums[evenIdx] % 2 == 0) {
                 evenIdx += 2;

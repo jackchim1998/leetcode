@@ -3,7 +3,7 @@ package easy;
 import org.junit.jupiter.api.Test;
 
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class UniqueEmailAddressesTest {
     private final UniqueEmailAddresses solution = new UniqueEmailAddresses();
@@ -22,7 +22,7 @@ class UniqueEmailAddressesTest {
 
     @Test
     void example3() {
-        int result = solution.numUniqueEmails(new String[]{"test.email+alex@leetcode.com","test.email.leet+alex@code.com"});
+        int result = solution.numUniqueEmails(new String[]{"test.email+alex@leetcode.com", "test.email.leet+alex@code.com"});
         assertEquals(2, result);
     }
 }

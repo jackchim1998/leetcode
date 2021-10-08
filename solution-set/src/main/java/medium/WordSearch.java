@@ -3,7 +3,7 @@ package medium;
 /**
  * @author Jack
  */
-public class WordSearch { // TODO not enough test case in LeetCode and the 0ms solution is wrong
+public class WordSearch {
     public boolean exist(char[][] board, String word) {
         for (int x = 0; x < board.length; x++)
             for (int y = 0; y < board[0].length; y++)

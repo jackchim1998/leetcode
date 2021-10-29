@@ -31,7 +31,7 @@ public class SortCharactersByFrequency {
         private int count = 0;
         private final char character;
 
-        public Element(char character) {
+        Element(char character) {
             this.character = character;
         }
     }

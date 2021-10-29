@@ -10,7 +10,7 @@ public class ReverseWordsInAString {
 
         StringBuilder result = new StringBuilder();
         int lastIdx = words.size() - 1;
-        for (int i = lastIdx; i>=0; i--) {
+        for (int i = lastIdx; i >= 0; i--) {
             if (i < lastIdx)
                 result.append(' ');
             result.append(words.get(i));
@@ -23,7 +23,7 @@ public class ReverseWordsInAString {
 
         StringBuilder temp = new StringBuilder();
         for (char c : arr) {
-            if (c == ' ' ) {
+            if (c == ' ') {
                 if (temp.length() != 0) {
                     words.add(temp.toString());
                     temp.setLength(0);

@@ -18,9 +18,6 @@ public class IntersectionOfTwoArraysII {
                 counts.put(num, --count);
             }
         }
-        int[] result = new int[intersection.size()];
-        for (int i = 0; i < intersection.size(); i++)
-            result[i] = intersection.get(i);
-        return result;
+        return intersection.stream().mapToInt(i -> i).toArray();
     }
 }

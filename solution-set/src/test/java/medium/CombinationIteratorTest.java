@@ -10,13 +10,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class CombinationIteratorTest {
     @Test
     void example1() {
-         CombinationIterator iterator = new CombinationIterator("abc", 2);
-         assertEquals("ab", iterator.next());
-         assertTrue(iterator.hasNext());
-         assertEquals("ac", iterator.next());
-         assertTrue(iterator.hasNext());
-         assertEquals("bc", iterator.next());
-         assertFalse(iterator.hasNext());
+        CombinationIterator iterator = new CombinationIterator("abc", 2);
+        assertEquals("ab", iterator.next());
+        assertTrue(iterator.hasNext());
+        assertEquals("ac", iterator.next());
+        assertTrue(iterator.hasNext());
+        assertEquals("bc", iterator.next());
+        assertFalse(iterator.hasNext());
     }
 
     @Test

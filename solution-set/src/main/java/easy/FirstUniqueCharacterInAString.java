@@ -10,7 +10,7 @@ public class FirstUniqueCharacterInAString {
         for (char c : chars)
             counts.put(c, counts.getOrDefault(c, 0) + 1);
 
-        for (int i=0;i<chars.length;i++)
+        for (int i = 0; i < chars.length; i++)
             if (counts.get(chars[i]) == 1)
                 return i;
         return -1;

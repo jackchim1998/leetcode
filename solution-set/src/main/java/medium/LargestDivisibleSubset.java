@@ -24,7 +24,7 @@ public class LargestDivisibleSubset {
             }
         }
 
-        LinkedList<Integer> result=new LinkedList<>();
+        LinkedList<Integer> result = new LinkedList<>();
         while (idxMax != -1) {
             result.addFirst(nums[idxMax]);
             idxMax = paths[idxMax];

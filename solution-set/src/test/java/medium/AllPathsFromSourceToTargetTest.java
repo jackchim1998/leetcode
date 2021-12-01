@@ -51,7 +51,7 @@ class AllPathsFromSourceToTargetTest {
                 {}
         });
         int[][] expected = {
-                {0, 1},
+                {0, 1}
         };
         assertEquals(expected, result);
     }

@@ -20,6 +20,10 @@ public class HouseRobberIII {
         if (node == null) return new int[]{0, 0};
         int[] left = loop(node.left);
         int[] right = loop(node.right);
-        return new int[]{node.val + left[1] + right[1], Math.max(left[0] + right[0], Math.max(left[1] + right[0], Math.max(left[0] + right[1], left[1] + right[1])))};
+        int rob = node.val + left[1] + right[1];
+        int notRob = Math.max(left[0] + right[1], left[1] + right[1]);
+        notRob = Math.max(left[1] + right[0], notRob);
+        notRob = Math.max(left[0] + right[0], notRob);
+        return new int[]{rob, notRob};
     }
 }

@@ -11,7 +11,7 @@ public class StreamChecker {
 
     private void insert(String word) {
         TrieNode curr = root;
-        for (int i = word.length() -1 ;i>= 0;i--) {
+        for (int i = word.length() - 1; i >= 0; i--) {
             int idx = word.charAt(i) - 'a';
             if (curr.nodes[idx] == null)
                 curr.nodes[idx] = new TrieNode();
@@ -22,12 +22,12 @@ public class StreamChecker {
 
     public boolean find() {
         TrieNode curr = root;
-        for (int i = sb.length()-1;i>=0;i--) {
+        for (int i = sb.length() - 1; i >= 0; i--) {
             TrieNode next = curr.nodes[sb.charAt(i) - 'a'];
             if (next == null)
                 return false;
             curr = next;
-            if (next.end)return true;
+            if (next.end) return true;
         }
         return false;
     }

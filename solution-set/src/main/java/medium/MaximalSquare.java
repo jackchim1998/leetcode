@@ -21,15 +21,12 @@ public class MaximalSquare {
             dp[0][i] = matrix[0][i] - '0';
             if (dp[0][i] == 1) side = 1;
         }
-        for (int i = 1; i < matrix.length; i++) {
-            for (int j = 1; j < matrix[0].length; j++) {
+        for (int i = 1; i < matrix.length; i++)
+            for (int j = 1; j < matrix[0].length; j++)
                 if (matrix[i][j] == '1') {
                     dp[i][j] = Math.min(dp[i - 1][j - 1], Math.min(dp[i - 1][j], dp[i][j - 1])) + 1;
                     side = Math.max(side, dp[i][j]);
                 }
-            }
-
-        }
         return side * side;
     }
 }

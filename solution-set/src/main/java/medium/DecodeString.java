@@ -10,7 +10,7 @@ public class DecodeString {
         Deque<Integer> countDeque = new LinkedList<>();
         int len = s.length();
         int idx = 0;
-        while (idx<len) {
+        while (idx < len) {
             char c = s.charAt(idx);
             if (Character.isDigit(c)) {
                 int count = 0;

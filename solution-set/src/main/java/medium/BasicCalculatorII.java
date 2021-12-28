@@ -14,7 +14,7 @@ public class BasicCalculatorII {
             char c = s.charAt(i);
             if (Character.isDigit(c))
                 num = (num * 10) + (c - '0');
-            if (!Character.isDigit(c) && !Character.isWhitespace(c) || i == len - 1) {
+            if (i == len - 1 || !Character.isDigit(c) && !Character.isWhitespace(c)) {
                 if (operation == '-')
                     stack.push(-num);
                 else if (operation == '+')

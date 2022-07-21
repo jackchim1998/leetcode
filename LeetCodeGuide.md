@@ -12,7 +12,7 @@
 
 - [x] Leetcode 148. Sort List
 - [x] Leetcode 56. Merge Intervals
-- [ ] Leetcode 27. Remove elements
+- [x] Leetcode 27. Remove elements
 
 ##### 进阶题目：
 

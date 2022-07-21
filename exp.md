@@ -1,8 +1,12 @@
-### experience from every leetcode
+## experience from every leetcode
 
-#### 148. Sort List
+### 148. Sort List
 
 Sort linked list -> merge sort (divide and conquer)
 
-#### 148. Merge Intervals
-intervals -> sort by first
+### 56. Merge Intervals
+
+Intervals -> sort by first
+
+### 27. Remove elements
+practice two pointers

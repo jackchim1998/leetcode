@@ -10,17 +10,22 @@ Intervals -> sort by first
 
 ### 27. Remove elements
 
-practice two pointers
+Practice two pointers
 
 ### 179. Largest Number
 
-practice custom comparator
+Practice custom comparator
 
 ### 75. Sort Colors
 
 Dutch national flag problem (DNF)
 
-one pass solution to sort 3 values with 3 pointers.
+One pass solution to sort 3 values with 3 pointers.
+
 1. pointer for value 0
 2. pointer for value 2
 3. pointer for current index
+
+### 215. Kth Largest Element
+
+Quick select (evolution from quick sort)

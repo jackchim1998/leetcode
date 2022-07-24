@@ -18,7 +18,7 @@
 
 - [x] Leetcode 179. Largest Number
 - [x] Leetcode 75. Sort Colors
-- [ ] Leetcode 215. Kth Largest Element （可以用堆的解法替代）
+- [x] Leetcode 215. Kth Largest Element （可以用堆的解法替代）
 - [ ] Leetcode 4. Median of Two Sorted Arrays
 
 注意：后两题是与快速排序非常相似的快速选择（Quick Select）算法，面试中很常考
